@@ -29,6 +29,11 @@ export class AboutComponent implements OnInit {
         name: "Preparación para certificación Java 17",
         category: "Certificaciones",
         url: "https://github.com/aurora1006/certificacion_java_17"
+      },
+      {
+        name: "iOS & Swift - The Complete iOS App Development Bootcamp",
+        category: "Certificaciones",
+        url: "https://www.udemy.com/certificate/UC-bf86e37c-b395-440a-bcb3-c7d84570ec1b/"
       }
     ];
 

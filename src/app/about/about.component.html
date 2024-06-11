@@ -1,0 +1,82 @@
+<div class="card">
+    <p-menubar [model]="items" />
+</div>
+<br>
+<div class="grid">
+    <div class="col-6">
+        <div class=" p-1 border-round-sm font-bold">
+            <p-card header="Aurora A. Sánchez" 
+                subheader="Web Developer">
+                <ng-template pTemplate="header">
+                    <img alt="Card" src="assets/portada.jpeg" />
+                </ng-template>
+                <div class="grid">
+                    <div class="col-2">
+                        <img
+                            src="/assets/contacto.png"
+                            width={500}
+                            height={500}
+                            alt="Logo"/>
+                    </div>   
+                    <div class="col-10">
+                        <p>{{email}}</p>
+                        <p>
+                            <a href="https://www.linkedin.com/in/aurora-antonia-sanchez-calva/" target="_blank" rel="noopener noreferrer">
+                                LinkedIn
+                            </a>
+                        </p>
+                        <p>
+                            <a href="https://drive.google.com/file/d/1MsRkkPpauDWv5O3BnVlQhORZZ6lK8LGC/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                                CV
+                            </a>
+                        </p>
+                    </div> 
+                </div>
+            </p-card>
+        </div>
+    </div>
+    <div class="col-6">
+        <div class="p-1 border-round-sm font-bold ">
+            <p-card>
+                <p class="m-0" class="large-text">
+                    <b>"{{frase}}"</b>
+                </p>
+                <p class="m-0">
+                    Steve Jobs
+                </p>
+            </p-card>
+        </div>
+        <div class="p-1 border-round-sm font-bold ">
+            <p-card>
+                <p class="m-0" class="large-text">
+                    <b>PROYECTOS</b>
+                </p>
+                <div class="card">
+                    <p-dataView #dv [value]="proyectos">
+                        <ng-template pTemplate="list" let-proyecto>
+                            <div class="grid grid-nogutter">
+                                <div class="col-12" *ngFor="let item of proyectos; let first = first" class="col-12">
+                                    <div class="flex flex-column sm:flex-row sm:align-items-center p-4 gap-3" [ngClass]="{ 'border-top-1 surface-border': !first }">
+                                        <div class="flex flex-column md:flex-row justify-content-between md:align-items-center flex-1 gap-4">
+                                            <div class="flex flex-row md:flex-column justify-content-between align-items-start gap-2">
+                                                <div>
+                                                    <div class="text-lg font-medium text-900 mt-2">
+                                                        {{ item.name }}
+                                                        <a href={{item.url}} target="_blank" rel="noopener noreferrer">
+                                                            <i class="pi pi-angle-right text-yellow-500"></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </ng-template>
+                    </p-dataView>
+                </div>
+            </p-card>
+        </div>
+    </div>
+</div>

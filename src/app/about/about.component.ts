@@ -26,9 +26,8 @@ export class AboutComponent implements OnInit {
         url: "https://apps.apple.com/us/app/hazcuentas/id1556955814"
       },
       {
-        name: "Preparación para certificación Java 17",
-        category: "Certificaciones",
-        url: "https://github.com/aurora1006/certificacion_java_17"
+        name: "Preparación Bootcamp 2026 IA Generativa, LLM Apps, Agentes IA, Cursor AI",
+        category: "En proceso"
       },
       {
         name: "iOS & Swift - The Complete iOS App Development Bootcamp",

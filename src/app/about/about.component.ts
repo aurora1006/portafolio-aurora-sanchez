@@ -33,6 +33,11 @@ export class AboutComponent implements OnInit {
         name: "iOS & Swift - The Complete iOS App Development Bootcamp",
         category: "Certificaciones",
         url: "https://www.udemy.com/certificate/UC-bf86e37c-b395-440a-bcb3-c7d84570ec1b/"
+      },
+      {
+        name: "🧠 AI-Powered Release Notes Generator",
+        category: "Poyecto",
+        url: "https://github.com/aurora1006/release_ai"
       }
     ];
 

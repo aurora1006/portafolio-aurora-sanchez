@@ -1,79 +1,168 @@
-<div class="card">
-    <p-menubar [model]="items" />
-</div>
-<br>
-<div class="grid">
-    <div class="col-6">
-        <div class=" p-1 border-round-sm font-bold">
-            <p-card header="Aurora A. Sánchez" 
-                subheader="Senior Full Stack Software Engineer ">
-                <ng-template pTemplate="header">
-                    <img alt="Card" src="assets/portada.jpeg" />
-                </ng-template>
-                <div class="grid">
-                    <!--<div class="col-2">
-                        <img
-                            src="/assets/contacto.png"
-                            width={500}
-                            height={500}
-                            alt="Logo"/>
-                    </div>  --> 
-                    <div class="col-10">
-                        <p>{{email}}</p>
-                        <p>
-                            <a href="https://www.linkedin.com/in/aurora-antonia-sanchez-calva/" target="_blank" rel="noopener noreferrer">
-                                LinkedIn
-                            </a>
-                        </p>
-                        <p>
-                            <a href="https://drive.google.com/file/d/1hbkZrVG6k50R96BDhUFxWWAhiC-MFQ8m/view?usp=sharing" target="_blank" rel="noopener noreferrer">
-                                CV
-                            </a>
-                        </p>
-                    </div> 
-                </div>
-            </p-card>
-        </div>
-    </div>
-    <div class="col-6">
-        <div class="p-1 border-round-sm font-bold ">
-            <p-card>
-                <p class="m-0" style="text-align: justify;" >
-                    Ingeniera de software con experiencia en desarrollo de aplicaciones web y móviles para operaciones logísticas, participando en el diseño de APIs, desarrollo frontend y backend, automatización de CI/CD e integración de herramientas de IA en procesos de entrega.
-                </p>
-            </p-card>
-        </div>
-        <div class="p-1 border-round-sm font-bold ">
-            <p-card>
-                <p class="m-0" class="large-text">
-                    <b>PROYECTOS</b>
-                </p>
-                <div class="card">
-                    <p-dataView #dv [value]="proyectos">
-                        <ng-template pTemplate="list" let-proyecto>
-                            <div class="grid grid-nogutter">
-                                <div class="col-12" *ngFor="let item of proyectos; let first = first" class="col-12">
-                                    <div class="flex flex-column sm:flex-row sm:align-items-center p-4 gap-3" [ngClass]="{ 'border-top-1 surface-border': !first }">
-                                        <div class="flex flex-column md:flex-row justify-content-between md:align-items-center flex-1 gap-4">
-                                            <div class="flex flex-row md:flex-column justify-content-between align-items-start gap-2">
-                                                <div>
-                                                    <div class="text-lg font-medium text-900 mt-2">
-                                                        {{ item.name }}
-                                                        <a href={{item.url}} target="_blank" rel="noopener noreferrer">
-                                                            <i class="pi pi-angle-right text-yellow-500"></i>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
 
+<main class="about-page">
+
+    <section class="about-container">
+
+        <!-- Profile -->
+        <div class="about-profile">
+
+            <!-- Left: Photograph -->
+            <div class="about-photo">
+                <div class="photo-frame">
+                    <img
+                        src="assets/aurora.png"
+                        alt="Aurora A. Sánchez - Senior Full Stack Software Engineer"
+                    />
+                </div>
+                <span class="photo-caption">Software Engineer · AI Enthusiast</span>
+            </div>
+
+            <!-- Right: Professional description -->
+            <div class="about-content">
+
+                <span class="section-eyebrow">ABOUT ME</span>
+
+                <h1>
+                    Aurora A. Sánchez
+                </h1>
+
+                <h2>
+                    Senior Full Stack Software Engineer
+                </h2>
+
+                <div class="wood-divider"></div>
+
+                <div class="about-description">
+                    <p>
+                        Ingeniera de Software Full Stack con experiencia
+                        en el desarrollo de aplicaciones web y móviles
+                        utilizando IA, .NET, Angular, Flutter y SQL Server.
+                        Con formación y experiencia como prompt engineer
+                        en aplicaciones LLM.
+                    </p>
+
+                    <p>
+                        Tengo experiencia en el diseño e implementación
+                        de soluciones de Inteligencia Artificial aplicadas
+                        a procesos empresariales. He desarrollado asistentes
+                        especializados, soluciones RAG y flujos basados en
+                        LLM que optimizan costos operativos, reducen el
+                        consumo de tokens, permiten la persistencia del
+                        conocimiento y automatizan tareas críticas del negocio.
+                    </p>
+                </div>
+
+                <div class="about-specialties">
+                    <span>Artificial Intelligence</span>
+                    <span>Full Stack Development</span>
+                    <span>LLM & RAG</span>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Contact -->
+        <footer class="about-contact">
+
+            <span class="contact-label">LET'S CONNECT</span>
+
+            <div class="contact-links">
+
+                <a [href]="'mailto:' + email">
+                    <i class="pi pi-envelope"></i>
+                    <span>{{ email }}</span>
+                </a>
+
+                <a
+                    href="https://www.linkedin.com/in/aurora-antonia-sanchez-calva/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <i class="pi pi-linkedin"></i>
+                    <span>LinkedIn</span>
+                </a>
+
+                <a
+                    href="https://drive.google.com/file/d/1tnc1S35OfYQ8kaXr5DsZnccLNXKCVs62/view?usp=sharing"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <i class="pi pi-file-pdf"></i>
+                    <span>Curriculum Vitae</span>
+                </a>
+
+            </div>
+
+        </footer>
+
+    </section>
+
+</main>
+
+
+<!--
+==================================================
+PROJECTS
+Se conserva el componente original para una
+implementación posterior.
+==================================================
+
+<div class="p-1 border-round-sm font-bold">
+    <p-card>
+        <p class="m-0 large-text">
+            <b>PROYECTOS</b>
+        </p>
+
+        <div class="card">
+            <p-dataView #dv [value]="proyectos">
+                <ng-template pTemplate="list" let-proyecto>
+                    <div class="grid grid-nogutter">
+                        <div
+                            class="col-12"
+                            *ngFor="let item of proyectos; let first = first"
+                        >
+                            <div
+                                class="flex flex-column sm:flex-row
+                                sm:align-items-center p-4 gap-3"
+                                [ngClass]="{
+                                    'border-top-1 surface-border': !first
+                                }"
+                            >
+                                <div
+                                    class="flex flex-column md:flex-row
+                                    justify-content-between md:align-items-center
+                                    flex-1 gap-4"
+                                >
+                                    <div
+                                        class="flex flex-row md:flex-column
+                                        justify-content-between align-items-start gap-2"
+                                    >
+                                        <div>
+                                            <div
+                                                class="text-lg font-medium
+                                                text-900 mt-2"
+                                            >
+                                                {{ item.name }}
+
+                                                <a
+                                                    [href]="item.url"
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                >
+                                                    <i class="pi pi-angle-right
+                                                    text-yellow-500"></i>
+                                                </a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </ng-template>
-                    </p-dataView>
-                </div>
-            </p-card>
+                        </div>
+                    </div>
+                </ng-template>
+            </p-dataView>
         </div>
-    </div>
+    </p-card>
 </div>
+
+-->

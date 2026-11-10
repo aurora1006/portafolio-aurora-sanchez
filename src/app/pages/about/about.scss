@@ -1,0 +1,158 @@
+
+:host {
+  display: block;
+  min-height: 100vh;
+}
+
+.about-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  background: #faf9f6;
+  color: #292929;
+}
+
+.about-container {
+  width: 100%;
+  max-width: 1100px;
+}
+
+.about-profile {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  align-items: center;
+  gap: 5rem;
+}
+
+.about-photo {
+  text-align: center;
+}
+
+.photo-frame {
+  padding: 12px;
+  border: 1px solid #dedbd4;
+  background: white;
+}
+
+.photo-frame img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+
+.photo-caption {
+  display: block;
+  margin-top: 1.2rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  color: #777;
+}
+
+.section-eyebrow,
+.contact-label {
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  color: #9a8060;
+  font-weight: 600;
+}
+
+.about-content h1 {
+  margin: 1rem 0 0.5rem;
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  font-weight: 400;
+  letter-spacing: -0.04em;
+}
+
+.about-content h2 {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #777;
+}
+
+.wood-divider {
+  width: 65px;
+  height: 2px;
+  margin: 2rem 0;
+  background: #a88c67;
+}
+
+.about-description {
+  font-size: 0.98rem;
+  line-height: 1.9;
+  color: #555;
+}
+
+.about-description p {
+  margin-bottom: 1.2rem;
+}
+
+.about-specialties {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  margin-top: 2rem;
+}
+
+.about-specialties span {
+  padding: 0.55rem 0.9rem;
+  border: 1px solid #dedbd4;
+  border-radius: 2px;
+  font-size: 0.75rem;
+  color: #655b4e;
+}
+
+.about-contact {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 5rem;
+  padding-top: 2rem;
+  border-top: 1px solid #e5e1da;
+}
+
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.contact-links a {
+  color: #555;
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: color 0.2s ease;
+}
+
+.contact-links a:hover {
+  color: #a88c67;
+}
+
+@media (max-width: 768px) {
+  .about-page {
+    padding: 3rem 1.3rem;
+  }
+
+  .about-profile {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .about-photo {
+    max-width: 280px;
+    margin: auto;
+  }
+
+  .about-contact {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 3rem;
+  }
+
+  .contact-links {
+    gap: 1.5rem;
+  }
+}
